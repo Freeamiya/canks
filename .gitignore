@@ -1,0 +1,75 @@
+# dot files
+/.vscode/launch.json
+/.settings
+/.eide/log
+/.eide.usr.ctx.json
+
+# project out
+/build
+/bin
+/obj
+/out
+
+# eide template
+*.ept
+*.eide-template
+# =========================
+# 通用
+# =========================
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.o
+*.d
+*.obj
+
+# =========================
+# 编译输出（重点）
+# =========================
+build/
+Build/
+out/
+Output/
+Debug/
+Release/
+
+# EIDE 构建目录
+.eide/
+*.eide.*
+
+# 编译生成文件
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.asm
+*.rel
+*.rst
+*.mem
+*.ihx
+
+# =========================
+# SDCC 相关
+# =========================
+*.lk
+*.noi
+*.sym
+
+# =========================
+# VSCode
+# =========================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# =========================
+# 系统文件
+# =========================
+.DS_Store
+Thumbs.db
