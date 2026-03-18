@@ -3,8 +3,7 @@
  * Freq: 12MHz
 */
 
-#include <reg52.h>
-#include <stdio.h>
+#include "config.h"
 
 void delay_100ms(void) //@12MHz
 {

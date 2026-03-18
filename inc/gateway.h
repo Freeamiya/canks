@@ -5,4 +5,6 @@
 #ifndef CAN51_GATEWAY_H
 #define CAN51_GATEWAY_H
 
+#include "config.h"
+
 #endif //CAN51_GATEWAY_H
