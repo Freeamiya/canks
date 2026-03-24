@@ -4,6 +4,9 @@
 */
 
 #include "config.h"
+#include "can.h"
+#include "gateway.h"
+#include "uart.h"
 
 void delay_100ms(void) //@12MHz
 {
