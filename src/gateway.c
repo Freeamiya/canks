@@ -3,6 +3,8 @@
 //
 
 #include "gateway.h"
+#include "uart.h"
+#include "can.h"
 
 static uint8 last_node1 = 0xFF;
 static uint8 last_node2 = 0xFF;
