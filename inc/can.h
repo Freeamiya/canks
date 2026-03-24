@@ -88,17 +88,17 @@ extern uint8 node2_data;
 输出控制寄存器及其位定义
 ************************/
 #define SJA_OCR    XBYTE(SJA_BASE_ADR + 0x08)
-           /*OCMODE1 ，OCMODE0 */
+        /*OCMODE1 ，OCMODE0 */
 #define BiPhaseMode       0x00       //双相输出模式
 #define NormalMode        0x02       //正常输出模式
 #define ClkOutMode        (0x01|0x02)//时钟输出模式
-           /*TX1 的输出管脚配置*/
+        /*TX1 的输出管脚配置*/
 #define OCPOL1_BIT        0x20       //输出极性控制位
 #define Tx1Float          0x00       //配置为悬空
 #define Tx1PullDn         0x40       //配置为下拉
 #define Tx1PullUp         0x80       //配置为上拉
 #define Tx1PshPull        (0x40|0x80)//配置为推挽
-            /*TX0 的输出管脚配置*/
+        /*TX0 的输出管脚配置*/
 #define OCPOL0_BIT        0x04       //输出极性控制位
 #define Tx0Float          0x00       //配置为悬空
 #define Tx0PullDn         0x08       //配置为下拉
@@ -106,10 +106,6 @@ extern uint8 node2_data;
 #define Tx0PshPull        (0x10|0x08)//配置为推挽
 
 #define SJA_TEST   XBYTE(SJA_BASE_ADR + 0x09) //测试寄存器
-
-/********************************
- * #define SJA_10   XBYTE(SJA_BASE_ADR + 0x0a)   寄存器功能保留
- ********************************/
 
 /**********************
 其他寄存器及其位定义

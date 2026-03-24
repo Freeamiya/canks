@@ -7,4 +7,7 @@
 
 #include "config.h"
 
+void UART_Init(void);
+void uart_printf(const char *format, ...);
+
 #endif //CAN51_UART_H

@@ -24,9 +24,11 @@ void delay_100ms(void) //@12MHz
 
 void main(void)
 {
+    //CAN_Init();
+    UART_Init();
     while (1)
     {
-        P00 = !P00;
-        delay_100ms();
+        gateway_process();
+        //uart_printf("Node1: %d, Node2: %d\r\n", node1_data, node2_data);
     }
 }

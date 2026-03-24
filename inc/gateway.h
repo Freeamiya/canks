@@ -7,4 +7,6 @@
 
 #include "config.h"
 
+void gateway_process(void);
+
 #endif //CAN51_GATEWAY_H

@@ -6,8 +6,9 @@
 #define CAN51_CONFIG_H
 
 #include <reg52.h>
-
+#include <stdarg.h>
 #include <stdio.h>
+#include "string.h"
 
 #define Fclk      11059200UL
 #define BAUD      9600UL
