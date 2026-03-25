@@ -7,7 +7,13 @@
 
 #include "config.h"
 
+extern uint8 uart_rx_data;
+extern bit uart_rx_flag;
+
 void UART_Init(void);
-void uart_printf(const char *format, ...);
+void UART_SendByte(uint8 dat);
+void UART_SendStr(char *s);
+void UART_SendHex(uint8 dat);
+void UART_ISR(void) interrupt 4;
 
 #endif //CAN51_UART_H

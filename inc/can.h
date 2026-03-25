@@ -176,7 +176,9 @@ RX缓冲器地址定义
 #define CANMode_BIT       0x80   
 
 //================= 接口函数 =================
+
 void CAN_Init(void);
 void Peli_RXD(void) interrupt 2;
+void Peli_TXD(uint16 can_id, uint8 tx_data);
 
 #endif // __CAN_H__

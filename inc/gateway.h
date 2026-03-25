@@ -6,6 +6,8 @@
 #define CAN51_GATEWAY_H
 
 #include "config.h"
+#include "uart.h"
+#include "can.h"
 
 void gateway_process(void);
 
