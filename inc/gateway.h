@@ -9,6 +9,8 @@
 #include "uart.h"
 #include "can.h"
 
-void gateway_process(void);
+extern uint8 tr_count;
+
+void Gateway_Process(void);
 
 #endif //CAN51_GATEWAY_H

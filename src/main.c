@@ -7,22 +7,24 @@
 #include "can.h"
 #include "gateway.h"
 #include "uart.h"
+#include "display.h"
 
-void mcu_init(void);
+void MCU_Init(void);
 
 void main(void)
 {
     //CAN_Init();
-    mcu_init();
+    MCU_Init();
     UART_Init();
     UART_SendStr("CAN51 Gateway Started\r\n");
     while (1)
     {       
-        gateway_process();
+        Gateway_Process();
+        //SEG_Display(tr_count);
     }
 }
 
-void mcu_init(void)
+void MCU_Init(void)
 {
 
 	MDELAY(10);	//延时
