@@ -9,11 +9,12 @@
 
 //================= 数据区 =================
 #define FrameNum 13
-
+#define SJA_RST  P34 //SJA1000复位管脚
+#define SJA_CS   P35 //SJA1000片选管脚
 extern uint8 RX_buffer[FrameNum];
 extern uint8 node1_data;
 extern uint8 node2_data;
-
+extern bit rx_flag;
 //================= 硬件接口 =================
 
 #define SJA_BASE_ADR     0xfe00	 //寄存器地址的基址
@@ -179,6 +180,6 @@ RX缓冲器地址定义
 
 void CAN_Init(void);
 void Peli_RXD(void) interrupt 2;
-void Peli_TXD(uint16 can_id, uint8 tx_data);
+void Peli_TXD(uint8 tx_data);
 
 #endif // __CAN_H__

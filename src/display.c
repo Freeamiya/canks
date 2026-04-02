@@ -30,23 +30,18 @@ void get_digits(uint8 num, uint8 *digits)
 
 void SEG_Display(uint8 num)
 {
-    uint8 display[2];
+    uint8 shi = num / 10;
+    uint8 ge  = num % 10;
 
-    get_digits(num, display);
+    // ===== 显示十位 =====
+    DIG1 = 1;
+    DIG2 = 0;
+    P1 = SegCode[shi];
+    MDELAY(2);
 
-    for (uint8 j = 0; j < 20; j++)
-    {
-        for (uint8 i = 0; i < 2; i++)
-        {
-            P0 = 0xFF;
-            P2 |= 0x03;     // P2.0 P2.1 = 1
-            P1 = SegCode[display[i]];
-            switch(i)
-            {
-                case 0: P2 &= ~0x01; break; // 第1位
-                case 1: P2 &= ~0x02; break; // 第2位
-            }
-            MDELAY(1);
-        }
-    }
+    // ===== 显示个位 =====
+    DIG1 = 0;
+    DIG2 = 1;
+    P1 = SegCode[ge];
+    MDELAY(2);
 }
